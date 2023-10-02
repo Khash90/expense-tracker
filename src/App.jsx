@@ -1,8 +1,9 @@
+import React from 'react';
 
-import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpanse/NewExpense';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -14,7 +15,6 @@ function App() {
     {
       id: 'e3',
       title: 'Car Insurance',
-      test:'sadsa',
       amount: 294.67,
       date: new Date(2021, 2, 28),
     },
@@ -26,9 +26,16 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
+
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
