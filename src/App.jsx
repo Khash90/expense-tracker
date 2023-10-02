@@ -14,6 +14,7 @@ function App() {
     {
       id: 'e3',
       title: 'Car Insurance',
+      test:'sadsa',
       amount: 294.67,
       date: new Date(2021, 2, 28),
     },
